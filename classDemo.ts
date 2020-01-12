@@ -76,3 +76,22 @@ class YetAnotherGreeter {
 //passing values via constructor
 let yetAnotherGreeter:YetAnotherGreeter = new YetAnotherGreeter("Hello World");
 yetAnotherGreeter.greet();
+
+/**
+ * A class with static variable and method
+ */
+class MyTimer {
+    //a public static variable, can be accessed without using this
+    static activty:string;
+
+    static schedule() {
+        console.log("\n-------- Using static variable and method ------------");
+        console.log("The activity=["+MyTimer.activty+"] has been schedule!");
+    }
+}
+/*
+No need to create an instance to use the functionality.
+Static members are accessed by ClassName
+*/
+MyTimer.activty = "Clean-up";
+MyTimer.schedule();
